@@ -503,8 +503,6 @@
         }
     }];
 
-    
-    
 }
 
 
@@ -605,11 +603,9 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSLog(@"HRE IN CELL FOR ITEM AT INDEX");
+    NSLog(@"HERE IN CELL FOR ITEM AT INDEX");
     
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"FB_cell" forIndexPath:indexPath];
-    
     
     cell.backgroundColor=[UIColor whiteColor];
     
@@ -645,6 +641,7 @@
     return cell;
 }
 
+//SELECTED FACEBOOK FRIEND
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath  {
     NSLog(@"selected");
     UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
