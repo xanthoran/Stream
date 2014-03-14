@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "-logInViewController:didFailToLogInWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "@implementation MainScreen"
             landmarkType = "3">
          </BreakpointContent>
@@ -138,45 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
             landmarkName = "-saveUserData:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-saveUserFriendData:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StreamApp/MainScreen.m"
-            timestampString = "415683846.832229"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "@interface MainScreen()"
-            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -200,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "619"
-            endingLineNumber = "619"
+            startingLineNumber = "588"
+            endingLineNumber = "588"
             landmarkName = "@implementation MainScreen"
             landmarkType = "3">
          </BreakpointContent>
@@ -216,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "673"
-            endingLineNumber = "673"
+            startingLineNumber = "642"
+            endingLineNumber = "642"
             landmarkName = "@implementation MainScreen"
             landmarkType = "3">
          </BreakpointContent>
@@ -232,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "684"
-            endingLineNumber = "684"
+            startingLineNumber = "653"
+            endingLineNumber = "653"
             landmarkName = "-collectionView:didDeselectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "685"
-            endingLineNumber = "685"
+            startingLineNumber = "654"
+            endingLineNumber = "654"
             landmarkName = "@implementation MainScreen"
             landmarkType = "3">
          </BreakpointContent>
@@ -264,7 +232,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -280,7 +248,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -296,7 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -312,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StreamApp/MainScreen.m"
-            timestampString = "416460545.17588"
+            timestampString = "416462923.311496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-facebookInit"
             landmarkType = "5">
          </BreakpointContent>

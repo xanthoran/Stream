@@ -31,14 +31,13 @@
     @property (weak, nonatomic) IBOutlet UIButton *sortAlertsButton;
     @property (weak, nonatomic) IBOutlet UIButton *sortHomeButton;
 
-
     @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
     @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
 
     @property NSMutableArray * friendList;
     @property NSMutableArray * selectedFriends;
 
-@property (weak, nonatomic) IBOutlet UITextView *textViewFriendsSelected;
+    @property (weak, nonatomic) IBOutlet UITextView *textViewFriendsSelected;
 
 
 
@@ -74,6 +73,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentTextViewDidStartEditing:) name:UITextViewTextDidBeginEditingNotification object:_inputContent];
     
+  
+    
 }
 
 - (void)viewDidLoad
@@ -102,7 +103,6 @@
     else {
         [self facebookInit];
     }
-    
 }
 
 
@@ -162,7 +162,6 @@
 
 -(void) saveUserFriendData:(NSMutableArray *) friends{
     NSLog(@"saving user friend data...");
-    
     _friendList = [[NSMutableArray alloc] init];
     
     for (NSMutableDictionary *friend in friends) {
@@ -182,7 +181,6 @@
     [self.collectionView reloadData];
 }
 
-
 - (IBAction)refreshButtonHandler:(id)sender {
     NSLog(@"Refreshing main table...");
     
@@ -201,7 +199,6 @@
 }
 
 -(void)slideBackAnchorView{
-    
     NSLog(@"slide back anchor view");
     
     float width = self.view.frame.size.width;
@@ -269,20 +266,9 @@
                           completionHandler:^(FBRequestConnection *connection,
                                               id result,
                                               NSError *error) {
-                              
                               if (error) {
-                                  
                                   NSLog(@"Error: %@", [error localizedDescription]);
-                                  
-                                  //DLog(@"Error: %@", [error localizedDescription]);
-                                  //[self.delegate FBDidFailedLoadFriends:error];
-                                  
-                                  
                               } else {
-                                 // NSLog(@"Result: %@", result);
-                                 //NSDictionary *friendData = (NSDictionary *)result;
-                                 //[self saveUserFriendData:(FBGraphObject*)result];
-                                  
                                   NSMutableArray *friends = ((FBGraphObject*)result)[@"data"];
                                   [self saveUserFriendData:friends];
                               }
@@ -353,12 +339,7 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
-
-
-
 #pragma mark - ()
-
-
 
 - (IBAction)meButtonTapAction:(id)sender {
     NSLog(@"pressed the ME buttnon");
@@ -368,9 +349,6 @@
     } else {
         [self slideOutMeMenu];
     }
-    
-    
-    
     
 }
 
@@ -390,17 +368,12 @@
                      }
                      completion:^(BOOL finished){
                          //NSLog(@"completed");
-                         
-                         
-                         
                      }
      ];
 }
 
 -(void)slideBackInMeMenu{
-    
     _meMenuOut = NO;
-    
     [UIView animateWithDuration:0.5f
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -412,9 +385,6 @@
                      }
                      completion:^(BOOL finished){
                          //NSLog(@"completed");
-                         
-                         
-                         
                      }
      ];
 }
@@ -480,8 +450,6 @@
     //[self.navigationController popViewControllerAnimated:YES];
     
     [self showLoginView:TRUE];
-    
-    
 }
 
 - (IBAction)createAnchorButtonTapAction:(id)sender {
@@ -490,8 +458,10 @@
  
     // Create a new Anchor object and create relationship with PFUser
     PFObject *newAnchor = [PFObject objectWithClassName:@"Anchor"];
+    
     [newAnchor setObject:[_inputTitle text] forKey:@"textTitle"];
     [newAnchor setObject:[_inputContent text] forKey:@"textContent"];
+    
     [newAnchor setObject:[PFUser currentUser] forKey:@"author"]; // One-to-Many relationship created here!
     
     NSString* first_name = [PFUser currentUser] [@"fb_first_name"];
@@ -508,7 +478,6 @@
             [self slideBackNewAnchor];
         }
     }];
-
 }
 
 
