@@ -21,6 +21,7 @@
                 <outlet property="rootView" destination="1" id="vVz-S4-FOy"/>
                 <outlet property="sortAlertsButton" destination="ODv-hI-pgm" id="N8e-ro-Z3I"/>
                 <outlet property="sortHomeButton" destination="qGM-PN-ncI" id="JYP-u5-6XG"/>
+                <outlet property="textViewFriendsSelected" destination="ftu-ne-X8G" id="q8U-jI-MIp"/>
                 <outlet property="userNameButton" destination="NIf-MA-NVb" id="dC8-6Y-2FW"/>
                 <outlet property="userPhotoView" destination="Xgb-ig-hFH" id="D95-OT-4pQ"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -149,10 +150,18 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Osc-5S-5Zs" userLabel="Input-Content">
-                            <rect key="frame" x="6" y="81" width="308" height="230"/>
+                            <rect key="frame" x="6" y="81" width="308" height="187"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="ftu-ne-X8G" userLabel="Text View-Friends">
+                            <rect key="frame" x="6" y="276" width="308" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <mutableString key="text">friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, friend, </mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sxD-xm-2rD" userLabel="Button - Submit">

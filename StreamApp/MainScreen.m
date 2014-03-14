@@ -38,6 +38,9 @@
     @property NSMutableArray * friendList;
     @property NSMutableArray * selectedFriends;
 
+@property (weak, nonatomic) IBOutlet UITextView *textViewFriendsSelected;
+
+
 
 @end
 
@@ -572,13 +575,20 @@
 }
 
 - (IBAction)friendsSubmitButtonTapAction:(id)sender {
-    
-
-    
     [self slideBackInFriends];
-    
     [_inputTitle becomeFirstResponder];
     
+    NSString * friendsString = @"";
+    
+    for (NSMutableDictionary *friend in _selectedFriends) {
+        
+        friendsString = [friendsString stringByAppendingString:friend[@"name"]];
+        
+        friendsString = [friendsString stringByAppendingString:@", "];
+        
+    }
+    
+    _textViewFriendsSelected.text = friendsString;
 }
 
 
@@ -592,19 +602,18 @@
 
 
 
+
+
+//COLLECTION VIEW METHODS
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
    // NSMutableArray *friends = [PFUser currentUser][@"fb_friends_with_app"];
-    
     return [self.friendList count];
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"HERE IN CELL FOR ITEM AT INDEX");
-    
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"FB_cell" forIndexPath:indexPath];
     
     cell.backgroundColor=[UIColor whiteColor];
@@ -647,6 +656,13 @@
     UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
     datasetCell.selected = YES;
     datasetCell.backgroundColor = [UIColor blueColor]; // highlight selection
+    
+    //add the friend selected to the array of friends...
+    
+    NSMutableDictionary *friendSelected = _friendList[indexPath.item];
+    
+    [_selectedFriends addObject:friendSelected];
+    
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -654,10 +670,23 @@
     UICollectionViewCell *datasetCell =[collectionView cellForItemAtIndexPath:indexPath];
     datasetCell.selected = NO;
     datasetCell.backgroundColor = [UIColor whiteColor]; // Default color
+    
+    NSMutableDictionary *friendSelected = _friendList[indexPath.item];
+    
+    [_selectedFriends removeObject:friendSelected];
+    
 }
 
 
 
+
+
+
+
+
+
+
+//TABLE VIEW METHODS
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
