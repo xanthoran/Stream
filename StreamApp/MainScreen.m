@@ -56,18 +56,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    
-    // Check if user is logged in
-    if (![PFUser currentUser]) {
-        [self showLoginView:false];
-    }
-    else {
-        [self facebookInit];
-    }
-    
-    return;
     
     //HIDE STATUS BAR
     if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
@@ -79,6 +67,8 @@
     }
     
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+    [super viewWillAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleTextViewDidChange:) name:UITextViewTextDidChangeNotification object:_inputTitle];
     
@@ -104,7 +94,18 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    // Check if user is logged in
+    if (![PFUser currentUser]) {
+        [self showLoginView:false];
+    }
+    else {
+        [self facebookInit];
+    }
+    
 }
+
+
 
 - (void)titleTextViewDidChange:(NSNotification *)notification {
     [_anchorTitlePrompt setHidden:YES];
@@ -128,8 +129,7 @@
     [PFUser currentUser][@"fb_pic_url"] = pictureURLstring;
     [PFUser currentUser][@"fb_first_name"] = first_name;
     
-    [[PFUser currentUser] saveInBackground];
-    
+    [[PFUser currentUser] save];
     
     
     if ([PFUser currentUser]) {
@@ -145,7 +145,6 @@
         _userPhotoView.image = image;
         
         float widthMod = 50 / image.size.width;
-        
         CGRect frame = _userPhotoView.frame;
         frame.size.width = image.size.width * widthMod;
         frame.size.height = image.size.height * widthMod;
@@ -256,8 +255,6 @@
         [self saveUserData:userData];
     }];
     
-    
-    return;
     
     //FRIENDS WITH THE APP
     NSString *query = @"select uid, name, is_app_user "
@@ -584,6 +581,8 @@
     [self slideBackInFriends];
     [_inputTitle becomeFirstResponder];
     
+    NSLog(@"done with freinds");
+    
     NSString * friendsString = @"";
     
     for (NSMutableDictionary *friend in _selectedFriends) {
@@ -595,6 +594,7 @@
     }
     
     _textViewFriendsSelected.text = friendsString;
+
 }
 
 
